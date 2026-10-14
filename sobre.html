@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Nós | Cachorro Leva-e-Seca</title>
+
+    <style>
+        /* Configurações gerais */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f9ff;
+            color: #24364b;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        .cabecalho {
+            background-color: #c8eaff;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #174d7a;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo strong {
+            color: #087cc1;
+        }
+
+        .logo-icone {
+            font-size: 38px;
+        }
+
+        /* Menu de navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #174d7a;
+            font-weight: bold;
+            padding: 10px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #087cc1;
+        }
+
+        nav a.ativo {
+            background-color: #ffcf52;
+            color: #174d7a;
+        }
+
+        /* Conteúdo principal */
+        .conteudo {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px 20px;
+        }
+
+        .conteudo h2 {
+            text-align: center;
+            color: #174d7a;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .conteudo p {
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .introducao {
+            font-size: 18px;
+        }
+
+        .introducao strong {
+            color: #087cc1;
+        }
+
+        /* Caixa de destaque */
+        .aviso {
+            background-color: #e3f4ff;
+            border-left: 5px solid #087cc1;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-top: 30px;
+        }
+
+        .aviso h3 {
+            color: #174d7a;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .aviso p {
+            margin-bottom: 0;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #174d7a;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            margin-top: 165px;
+        }
+
+        footer p {
+            margin: 4px;
+        }
+
+        /* Adaptação para celulares */
+        @media (max-width: 600px) {
+            .cabecalho {
+                justify-content: center;
+                padding: 20px 12px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav {
+                gap: 4px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+            }
+
+            .conteudo {
+                padding: 25px 12px;
+            }
+
+            .conteudo h2 {
+                font-size: 25px;
+            }
+
+            .conteudo p {
+                font-size: 16px;
+            }
+
+            .aviso {
+                padding: 18px;
+            }
+
+            .aviso h3 {
+                font-size: 19px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a class="logo" href="index.html">
+            <span class="logo-icone">🐶</span>
+            <span>Cachorro <strong>Leva-e-Seca</strong></span>
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="precos.html">Preços</a>
+            <a href="contato.html">Contato</a>
+            <a class="ativo" href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+
+        <h2>Sobre Nós</h2>
+
+        <p class="introducao">
+            O <strong>Cachorro Leva-e-Seca</strong> é um projeto
+            desenvolvido pelos alunos do curso de Front-End do
+            SENAI, em 2026, como parte das atividades práticas
+            realizadas em aula.
+        </p>
+
+        <p>
+            Estamos dando nossos primeiros passos no mundo da
+            programação, aprendendo conceitos básicos de
+            desenvolvimento web e utilizando tecnologias como
+            HTML e CSS para criar páginas organizadas, acessíveis
+            e visualmente agradáveis.
+        </p>
+
+        <p>
+            A proposta deste projeto é colocar em prática os
+            conhecimentos adquiridos durante o curso, desenvolvendo
+            um site fictício para um pet shop, com informações
+            sobre serviços, preços e formas de contato.
+        </p>
+
+        <p>
+            Mais do que criar uma página na internet, buscamos
+            desenvolver nossas habilidades, estimular a criatividade
+            e adquirir experiência para os próximos desafios na
+            área de tecnologia.
+        </p>
+
+        <div class="aviso">
+            <h3>🐾 Aprendendo hoje, desenvolvendo o futuro!</h3>
+
+            <p>
+                Este é apenas o começo da nossa jornada na
+                programação. Cada projeto é uma oportunidade
+                de aprender, praticar e evoluir.
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cachorro Leva-e-Seca</p>
+        <p>Feito com carinho para os nossos melhores amigos!</p>
+    </footer>
+
+</body>
+</html>

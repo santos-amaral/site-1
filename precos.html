@@ -1,76 +1,372 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preços | Leva-e-Seca</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <title>Cachorro Leva-e-Seca | Preços</title>
+
+    <style>
+        /* Configurações gerais */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f9ff;
+            color: #24364b;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        .cabecalho {
+            background-color: #c8eaff;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #174d7a;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo strong {
+            color: #087cc1;
+        }
+
+        .logo-icone {
+            font-size: 38px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #174d7a;
+            font-weight: bold;
+            padding: 10px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #087cc1;
+        }
+
+        nav a.ativo {
+            background-color: #ffcf52;
+            color: #174d7a;
+        }
+
+        /* Conteúdo principal */
+        .conteudo {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px 20px;
+        }
+
+        .conteudo h2 {
+            text-align: center;
+            color: #174d7a;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .introducao {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-align: center;
+            color: #586b7d;
+            font-size: 17px;
+        }
+
+        /* Tabela de preços */
+        .tabela-container {
+            overflow-x: auto;
+            background-color: #ffffff;
+            border: 1px solid #d3eaff;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px #174d7a12;
+            margin-top: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #d3eaff;
+        }
+
+        th {
+            background-color: #087cc1;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e8f5ff;
+        }
+
+        tbody tr:hover {
+            background-color: #d9efff;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:last-child {
+            color: #174d7a;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* Informações importantes */
+        .informacoes-precos {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #ffffff;
+            border: 1px solid #d3eaff;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px #174d7a12;
+        }
+
+        .informacoes-precos h3 {
+            margin-top: 0;
+            color: #087cc1;
+            font-size: 21px;
+        }
+
+        .informacoes-precos ul {
+            padding-left: 25px;
+            margin-bottom: 0;
+        }
+
+        .informacoes-precos li {
+            margin-bottom: 10px;
+            color: #586b7d;
+        }
+
+        .informacoes-precos li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Botão */
+        .centralizado {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #087cc1;
+            color: #ffffff;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #075b91;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #174d7a;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 4px;
+        }
+
+        /* Adaptação para celulares */
+        @media (max-width: 600px) {
+            .cabecalho {
+                justify-content: center;
+                padding: 20px 12px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav {
+                gap: 4px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+            }
+
+            .conteudo {
+                padding: 25px 12px;
+            }
+
+            .conteudo h2 {
+                font-size: 25px;
+            }
+
+            .introducao {
+                font-size: 16px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .informacoes-precos {
+                padding: 20px 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>🐶 Cachorro Leva-e-Seca</h1>
-        <p>Qualidade e carinho pelo seu pet!</p>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <a class="logo" href="index.html">
+            <span class="logo-icone">🐶</span>
+            <span>Cachorro <strong>Leva-e-Seca</strong></span>
+        </a>
 
         <nav>
             <a href="index.html">Início</a>
             <a href="servicos.html">Serviços</a>
-            <a href="precos.html">Preços</a>
+            <a class="ativo" href="precos.html">Preços</a>
             <a href="contato.html">Contato</a>
+            <a href="sobre.html">Sobre</a>
         </nav>
     </header>
 
+    <!-- Conteúdo principal -->
     <main class="conteudo">
+
         <h2>Tabela de Preços</h2>
-        <p>Confira nossos valores ilustrativos.</p>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Serviço</th>
-                    <th>Descrição</th>
-                    <th>Preço</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Banho</td>
-                    <td>Banho e secagem</td>
-                    <td>R$ 35,00</td>
-                </tr>
-                <tr>
-                    <td>Tosa</td>
-                    <td>Corte de pelos</td>
-                    <td>R$ 45,00</td>
-                </tr>
-                <tr>
-                    <td>Escovação</td>
-                    <td>Escovação da pelagem</td>
-                    <td>R$ 20,00</td>
-                </tr>
-                <tr>
-                    <td>Banho + Tosa</td>
-                    <td>Pacote completo</td>
-                    <td>R$ 70,00</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p class="aviso">
-            Os preços são fictícios e fazem parte do projeto escolar.
+        <p class="introducao">
+            No Cachorro Leva-e-Seca, oferecemos opções
+            para cuidar do seu pet com carinho.
+            Confira nossa tabela de preços!
         </p>
 
+        <!-- Tabela -->
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serviço</th>
+                        <th>O que está incluído</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Banho e secagem</td>
+                        <td>Banho e secagem dos pelos</td>
+                        <td>R$ 35,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tosa</td>
+                        <td>Corte e acabamento da pelagem</td>
+                        <td>R$ 45,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Escovação</td>
+                        <td>Escovação dos pelos</td>
+                        <td>R$ 20,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Banho + Tosa</td>
+                        <td>Banho, secagem e tosa</td>
+                        <td>R$ 70,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Corte de unhas</td>
+                        <td>Aparar as unhas com cuidado</td>
+                        <td>R$ 15,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Informações importantes -->
+        <section class="informacoes-precos">
+            <h3>ℹ️ Informações importantes</h3>
+
+            <ul>
+                <li>Os preços são valores ilustrativos.</li>
+
+                <li>
+                    O valor pode variar conforme o porte
+                    do animal e as condições da pelagem.
+                </li>
+
+                <li>
+                    Serviços especiais devem ser consultados
+                    antes do agendamento.
+                </li>
+
+                <li>
+                    O bem-estar e a segurança dos pets
+                    são sempre prioridades.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Botão de agendamento -->
         <p class="centralizado">
             <a class="botao" href="contato.html">
-                Entre em contato
+                Solicitar agendamento
             </a>
         </p>
+
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2026 Cachorro Leva-e-Seca</p>
+        <p>Feito com carinho para os nossos melhores amigos!</p>
     </footer>
 
 </body>
